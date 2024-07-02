@@ -1,8 +1,9 @@
 @extends('layouts.app')
-
+@section('title','Movie list')
 @section('content')
-    @foreach ($movies as $movie)
-        <pre>{{ $movie['title'] }}</pre>
-    @endforeach
-    
+    <ol>
+        @foreach ($movies as $movie)
+            <li>{{ $movie->title }}</li>
+        @endforeach
+    </ol>
 @endsection
